@@ -1,0 +1,9 @@
+header {
+    box-shadow: 0 6px 13px rgba(0,0,0,.07);
+}
+header a {
+    @apply text-2xl px-3;
+}
+header a:hover {
+    color: red;
+}
