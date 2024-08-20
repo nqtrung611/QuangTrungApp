@@ -3,7 +3,7 @@ import React from "react";
 const PageCounter = () => {
     return (
         <>
-            <div>PageCounter</div>
+            <div>Page Counter</div>
         </>
     )
 }
