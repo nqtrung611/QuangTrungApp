@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import DeleteForm from "./DeleteForm";
 import { getAllTasks } from "@/utils/actionTodo";
 import Image from "next/image";
@@ -30,7 +29,7 @@ const Todos = async () => {
                         {task.content}
                     </h2>
                     <div className="flex gap-6 items-center">
-                        <Link href={`/todo/${task.id}`}>Edit</Link>
+                        <a>Edit</a>
                         <DeleteForm id={task.id}/>
                     </div>
                 </li>
