@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import DeleteForm from "./DeleteForm";
 import { getAllTasks } from "@/utils/actionTodo";
+import Image from "next/image";
 
 const Todos = async () => {
     const tasks = await getAllTasks();
@@ -14,8 +15,10 @@ const Todos = async () => {
         <ul>
             {tasks.map((task) => (
                 <li key={task.id} className="flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg">
-                    <img
+                    <Image
                         className="w-8 h-8 absolute"
+                        width={32}
+                        height={32}
                         src={`/images/${task.completed ? 'checked1.png' : 'unchecked.png'}`}
                         alt=""
                     />
