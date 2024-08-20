@@ -11,7 +11,7 @@ export const createTask = async (formData: any) => {
         },
     });
 
-    revalidatePath('/todo');
+    // revalidatePath('/todo');
 };
 
 export const getAllTasks = async () => {
@@ -28,7 +28,7 @@ export const deleteTask = async (formData: any) => {
         where: { id },
     });
 
-    revalidatePath('/todo');
+    // revalidatePath('/todo');
 };
 
 export const getTask = async (id: any) => {
@@ -37,22 +37,4 @@ export const getTask = async (id: any) => {
             id,
         },
     });
-};
-
-export const editTask = async (formData: any) => {
-    const id = formData.get("id");
-    const content = formData.get("content");
-    const completed = formData.get("completed");
-
-    await prisma.task.update({
-        where: {
-            id,
-        },
-        data: {
-            content,
-            completed: completed === "on",
-        },
-    });
-
-    redirect("/todo");
 };
