@@ -11,7 +11,7 @@ export const createTask = async (formData: any) => {
         },
     });
 
-    // revalidatePath('/todo');
+    revalidatePath('/todo');
 };
 
 export const getAllTasks = async () => {
@@ -28,7 +28,7 @@ export const deleteTask = async (formData: any) => {
         where: { id },
     });
 
-    // revalidatePath('/todo');
+    revalidatePath('/todo');
 };
 
 export const getTask = async (id: any) => {
