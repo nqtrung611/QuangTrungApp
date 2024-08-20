@@ -1,5 +1,7 @@
 import React from "react";
-import PageTodo from "@/components/common/todo/todo";
+// import PageTodo from "@/components/common/todo/todo";
+import TodoForm from "@/components/common/todo/TodoForm";
+import Todos from "@/components/common/todo/Todos";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,9 +11,10 @@ export const metadata: Metadata = {
 
 const Page = () => {
     return (
-        <>
-            <PageTodo/>
-        </>
+        <div className="max-w-lg m-auto w-full mt-8">
+            <TodoForm/>
+            <Todos/>
+        </div>
     );
 }
 

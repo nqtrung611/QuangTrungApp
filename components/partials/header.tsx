@@ -3,7 +3,7 @@ import '@/styles/components/header.css'
 
 export default function Header() {
     return (
-        <header className="flex items-center pl-5 py-3">
+        <header className="flex items-center pl-5 py-3 overflow-hidden">
             <Link href='/'>Home</Link>
             <Link href='/todo'>Todo</Link>
             <Link href='/youtube'>YouTube</Link>

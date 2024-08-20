@@ -2,11 +2,11 @@ import prisma from "@/utils/db";
 import React, { useEffect } from "react";
 
 const getAllTasks = async () => {
-    // await prisma.task.create({
-    //     data: {
-    //         content: 'Buy PC',
-    //     },
-    // });
+    await prisma.task.create({
+        data: {
+            content: 'Buy PC',
+        },
+    });
 
     // await prisma.task.update({
     //     where: {
