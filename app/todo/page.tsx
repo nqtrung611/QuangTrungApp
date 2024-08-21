@@ -11,8 +11,10 @@ export const metadata: Metadata = {
 
 const Page = () => {
     return (
-        <div className="max-w-lg m-auto w-full mt-8">
-            <TodoForm/>
+        <div className="todo-app relative mt-32 mb-10 mx-0">
+            <header>
+                <TodoForm/>
+            </header>
             <Todos/>
         </div>
     );

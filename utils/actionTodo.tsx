@@ -5,6 +5,11 @@ import { redirect } from "next/navigation";
 
 export const createTask = async (formData: any) => {
     const content = formData.get("content");
+    if (content.trim() === '') {
+        formData.reset();
+        console.log('trung');
+        return;
+    }
     await prisma.task.create({
         data: {
             content,
