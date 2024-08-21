@@ -3,7 +3,7 @@ import DeleteForm from "./DeleteForm";
 import { getAllTasks } from "@/utils/actionTodo";
 import Image from "next/image";
 
-export default async function Todosasync () {
+export default async function Todos () {
     const tasks = await getAllTasks();
 
     return (
