@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'client',
-};
+const nextConfig = {};
 
 export default nextConfig;
