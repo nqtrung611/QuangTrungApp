@@ -1,9 +1,14 @@
-import { deleteTask } from "@/utils/actionTodo";
+// import { deleteTask } from "@/utils/actionTodo";
 import React from "react";
 
-export default function DeleteForm({ id }: any) {
-    return <form action={deleteTask}>
-        <input type="hidden" name="id" value={id} />
+// const DeleteForm = ({ id }: any) => {
+const DeleteForm = () => {
+    // return <form action={deleteTask}>
+    return <form>
+        {/* <input type="hidden" name="id" value={id} /> */}
+        <input type="hidden" name="id" />
         <button className="delete">X</button>
     </form>;
 }
+
+export default DeleteForm;
