@@ -1,14 +1,15 @@
 import React from "react";
-import DeleteForm from "./DeleteForm";
-import { getAllTasks } from "@/utils/actionTodo";
-import Image from "next/image";
+// import DeleteForm from "./DeleteForm";
+// import { getAllTasks } from "@/utils/actionTodo";
+// import Image from "next/image";
 
-export default async function Todos () {
-    const tasks = await getAllTasks();
+// export default async function Todos () {
+export default function Todos () {
+    // const tasks = await getAllTasks();
 
     return (
         <>
-            <div>
+            {/* <div>
                 <main>
                     <div className="toggle-all-container">
                     <input type="checkbox" className="toggle-all"/>
@@ -32,7 +33,7 @@ export default async function Todos () {
                         ))}
                     </ul>
                 </main>
-            </div>
+            </div> */}
             <footer className="footer">
                 <span className="todo-count">3 items left</span>
                 <div className="filters">
