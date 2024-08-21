@@ -3,7 +3,7 @@ import React from "react";
 export default function PageCounter() {
     return (
         <>
-            <div>Page Counter</div>
+            <div>Page Counterrr</div>
         </>
     )
 }
