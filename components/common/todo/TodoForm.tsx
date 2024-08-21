@@ -2,7 +2,7 @@ import { createTask } from "@/utils/actionTodo";
 import React from "react";
 import "@/styles/components/todo.css"
 
-const TodoForm = () => {
+export default function TodoForm() {
     return (
         <form action={createTask}>
             <h1>Todos</h1>
@@ -18,5 +18,3 @@ const TodoForm = () => {
         </form>
     )
 }
-
-export default TodoForm;

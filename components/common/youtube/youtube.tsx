@@ -1,6 +1,6 @@
 import React from "react";
 
-const PageYouTube = () => {
+export default function PageYouTube() {
     return (
         <>
             <h1 className="text-center text-4xl py-2">PageYouTube</h1>
@@ -17,5 +17,3 @@ const PageYouTube = () => {
         </>
     );
 }
-
-export default PageYouTube;

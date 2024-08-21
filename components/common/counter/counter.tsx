@@ -1,11 +1,9 @@
 import React from "react";
 
-const PageCounter = () => {
+export default function PageCounter() {
     return (
         <>
             <div>Page Counter</div>
         </>
     )
 }
-
-export default PageCounter;

@@ -27,7 +27,7 @@ const getAllTasks = async () => {
     return allTasks;
 };
 
-const PagePrisma = async () => {
+export default async function PagePrisma() {
     const tasks = await getAllTasks();
     // console.log(tasks);
     // console.log('Component mounted');
@@ -45,5 +45,3 @@ const PagePrisma = async () => {
         </>
     );
 }
-
-export default PagePrisma;
