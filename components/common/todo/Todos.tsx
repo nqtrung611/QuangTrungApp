@@ -1,15 +1,23 @@
 import React from "react";
-// import DeleteForm from "./DeleteForm";
+import DeleteForm from "./DeleteForm";
 // import { getAllTasks } from "@/utils/actionTodo";
-// import Image from "next/image";
+import Image from "next/image";
+import prisma from "@/utils/db";
 
-// export default async function Todos () {
-export default function Todos () {
-    // const tasks = await getAllTasks();
+
+export default async function Todos () {
+    const getAllTasks = async () => {
+        return await prisma.task.findMany({
+            orderBy: {
+                createdAt: "desc",
+            },
+        });
+    }
+    const tasks = await getAllTasks();
 
     return (
         <>
-            {/* <div>
+            <div>
                 <main>
                     <div className="toggle-all-container">
                     <input type="checkbox" className="toggle-all"/>
@@ -33,7 +41,7 @@ export default function Todos () {
                         ))}
                     </ul>
                 </main>
-            </div> */}
+            </div>
             <footer className="footer">
                 <span className="todo-count">3 items left</span>
                 <div className="filters">
