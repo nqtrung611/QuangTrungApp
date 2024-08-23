@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <div className="todo-app relative mt-32 mb-10 mx-0">
-            <header>
+        <div className="body-todo">
+            <div className="todo-app relative mt-32 mb-10 mx-0">
                 <TodoForm/>
-            </header>
-            <Todos/>
+                <Todos/>
+            </div>
         </div>
     );
 }
