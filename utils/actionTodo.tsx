@@ -2,13 +2,13 @@
 import prisma from "@/utils/db";
 import { revalidatePath } from "next/cache";
 
-export const createTask = async (content: any) => {
-    // const content = formData.get("content");
-    // if (content.trim() === '') {
-    //     // formData.reset();
-    //     console.log(formData);
-    //     return;
-    // }
+export const createTask = async (formData: any) => {
+    const content = formData.get("content");
+    if (content.trim() === '') {
+        // formData.reset();
+        console.log(formData);
+        return;
+    }
     await prisma.task.create({
         data: {
             content,
@@ -26,8 +26,8 @@ export const createTask = async (content: any) => {
 //     });
 // }
 
-export const deleteTask = async (id: any) => {
-    // const id = formData.get("id");
+export const deleteTask = async (formData: any) => {
+    const id = formData.get("id");
     await prisma.task.delete({
         where: { id },
     });
