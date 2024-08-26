@@ -6,7 +6,7 @@ export const createTask = async (formData: any) => {
     const content = formData.get("content");
     if (content.trim() === '') {
         // formData.reset();
-        console.log(formData);
+        // console.log(formData);
         return;
     }
     await prisma.task.create({
@@ -35,10 +35,27 @@ export const deleteTask = async (formData: any) => {
     revalidatePath('/todo');
 };
 
-// // export const getTask = async (id: any) => {
-// //     return prisma.task.findUnique({
-// //         where: {
-// //             id,
-// //         },
-// //     });
-// // };
+
+
+export const getTask = async (id: any) => {
+    return prisma.task.findUnique({
+        where: {
+            id,
+        },
+    });
+};
+
+export const completedTask = async (formData: any) => {
+    const id = formData.get("id");
+    const task = await getTask(id);
+    await prisma.task.update({
+        where: {
+            id,
+        },
+        data: {
+            content: task!.content,
+            completed: (task!.completed) ? false : true,
+        },
+    });
+    revalidatePath('/todo');
+};

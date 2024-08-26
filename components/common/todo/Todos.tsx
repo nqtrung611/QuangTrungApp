@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import DeleteForm from "./DeleteForm";
 import { getAllTasks } from "@/utils/actionTodo";
-import Image from "next/image";
+import CompletedForm from "./CompletedForm";
 
 
 export default async function Todos () {
@@ -20,15 +20,10 @@ export default async function Todos () {
                     <ul className="todo-list">
                         {tasks.map((task) => (
                             <li key={task.id} className="task view">
-                                <Image
-                                    width={32}
-                                    height={32}
-                                    src={`/images/${task.completed ? 'checked1.png' : 'unchecked.png'}`}
-                                    alt=""
-                                />
+                                <CompletedForm id={task.id}/>
                                 <label>{task.content}</label>
-                                <DeleteForm id={task.id}/>
                                 <input type="text" style={{display: 'none'}}/>
+                                <DeleteForm id={task.id}/>
                             </li>
                         ))}
                     </ul>
