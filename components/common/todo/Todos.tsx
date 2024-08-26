@@ -1,18 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import DeleteForm from "./DeleteForm";
-// import { getAllTasks } from "@/utils/actionTodo";
+import { getAllTasks } from "@/utils/actionTodo";
 import Image from "next/image";
-import prisma from "@/utils/db";
 
 
 export default async function Todos () {
-    const getAllTasks = async () => {
-        return await prisma.task.findMany({
-            orderBy: {
-                createdAt: "desc",
-            },
-        });
-    }
     const tasks = await getAllTasks();
 
     return (
