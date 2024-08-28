@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-export default function EditForm({ id }: any) {
+export default function EditForm({ task }: any) {
+    // const refLabel = useRef(null);
+
+    // useEffect(() => {
+    //     if (refLabel.current) {
+    //       // Thao tác với phần tử tại đây
+    //       refLabel.current.style.color = 'red';
+    //     }
+    //   }, [refLabel]);
     return (
         <>
             {/* <form action={deleteTask}> */}
-                <input type="hidden" name="id" value={id} />
-                <button className="delete">X</button>
+                {/* <label ref={refLabel}>{task.content}</label> */}
+                <input type="text" style={{display: 'none'}}/>
             {/* </form>; */}
         </>
     )
