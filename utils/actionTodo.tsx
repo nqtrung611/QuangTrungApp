@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 
 export const createTask = async (formData: any) => {
     const content = formData.get("content");
+    console.log(typeof content);
     if (content.trim() === '') {
         // formData.reset();
         // console.log(formData);
